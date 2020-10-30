@@ -168,4 +168,9 @@ def SimplifyWithConstraints : FunctionPass<"pxa-simplify-with-constraints"> {
   let constructor = "pmlc::dialect::pxa::createSimplifyWithConstraintsPass()";
 }
 
+def VectorizeMem : FunctionPass<"pxa-vectorize-mem"> {
+  let summary = "Vectorize load and reduce assign ops";
+  let constructor = "pmlc::dialect::pxa::createVectorizeMemPass()";
+}
+
 #endif // __PMLC_DIALECT_PXA_PASSES__
